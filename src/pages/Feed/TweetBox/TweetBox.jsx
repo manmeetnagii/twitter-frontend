@@ -53,7 +53,7 @@ function TweetBox() {
   // Function for fetching User Data
   const fetchUserData = async (query) => {
     try {
-      const response = await fetch(`http://localhost:8000/loggedInUser?${query}`);
+      const response = await fetch(`https://twitter-backend-main.onrender.com/loggedInUser?${query}`);
       if (!response.ok) throw new Error('Network response was not ok');
         return await response.json();
       } 
@@ -111,7 +111,7 @@ function TweetBox() {
         }
       } 
       else {
-        const response = await fetch(`http://localhost:8000/post`, {
+        const response = await fetch(`https://twitter-backend-main.onrender.com/post`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -139,7 +139,7 @@ function TweetBox() {
     setEmailModal(true);
     const userEmail = user.email;
     try {
-      const response = await axios.post("http://localhost:8000/send-emailOtp", {
+      const response = await axios.post("https://twitter-backend-main.onrender.com/send-emailOtp", {
         userEmail,
       });
       // console.log("Response:", response.data);
@@ -155,7 +155,7 @@ function TweetBox() {
     const userEmail = user.email;
     const bodyData = { userEmail, otp };
     try {
-      const response = await axios.post("http://localhost:8000/verify-emailOtp",
+      const response = await axios.post("https://twitter-backend-main.onrender.com/verify-emailOtp",
         { bodyData }
       );
 
@@ -175,7 +175,7 @@ function TweetBox() {
           phoneNumber: userPhoneNumber ? userPhoneNumber.replace("+", "") : null,
         };
 
-        const response = await fetch(`http://localhost:8000/post`, {
+        const response = await fetch(`https://twitter-backend-main.onrender.com/post`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -278,7 +278,7 @@ function TweetBox() {
 
         try {
           const response = await axios.post(
-            "http://localhost:8000/upload-audio",
+            "https://twitter-backend-main.onrender.com/upload-audio",
             formData,
             { headers: { "Content-Type": "multipart/form-data" } }
           );

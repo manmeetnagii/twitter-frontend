@@ -9,7 +9,7 @@ const useLoggedInUser = () => {
 
     useEffect(() => {
         if(!phoneNumber){
-            fetch(`http://localhost:8000/loggedInUser?email=${email}`)
+            fetch(`https://twitter-backend-main.onrender.com/loggedInUser?email=${email}`)
             .then(res => res.json()) 
             .then(data => {
                
@@ -17,7 +17,7 @@ const useLoggedInUser = () => {
             })
         }
         else{
-            fetch(`http://localhost:8000/loggedInUser?phoneNumber=${phoneNumber.replace("+", "")}`)
+            fetch(`https://twitter-backend-main.onrender.com/loggedInUser?phoneNumber=${phoneNumber.replace("+", "")}`)
             .then(res => res.json()) 
             .then(data => {
                 setLoggedInUser(data)

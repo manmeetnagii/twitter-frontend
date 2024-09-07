@@ -77,7 +77,7 @@ const Settings = () => {
     setIsloading(true);
     try {
       const response = await axios.post(
-        "http://localhost:8000/send-phoneOtp",
+        "https://twitter-backend-main.onrender.com/send-phoneOtp",
         { phoneNumber }
       );
       console.log("Response:", response.data);
@@ -99,7 +99,7 @@ const Settings = () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:8000/verify-phoneOtp",
+        "https://twitter-backend-main.onrender.com/verify-phoneOtp",
         { bodyData }
       );
       if (response.data.success === true) {
@@ -121,7 +121,7 @@ const Settings = () => {
     const userEmail = user.email;
     try {
       const response = await axios.post(
-        "http://localhost:8000/send-emailOtp",
+        "https://twitter-backend-main.onrender.com/send-emailOtp",
         { userEmail }
       );
       // console.log("Response:", response.data);
@@ -142,7 +142,7 @@ const Settings = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/verify-emailOtp",
+        "https://twitter-backend-main.onrender.com/verify-emailOtp",
         { bodyData }
       );
 

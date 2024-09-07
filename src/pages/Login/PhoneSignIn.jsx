@@ -90,7 +90,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
         const registerUser = async (user, systemInfo) => {
           try {
             const registerSystemResponse = await axios.post(
-              "http://localhost:8000/systemInfo",
+              "https://twitter-backend-main.onrender.com/systemInfo",
               { systemInfo },
               {
                 headers: {
@@ -99,7 +99,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
               }
             );
             const registerUserResponse = await axios.post(
-              "http://localhost:8000/register",
+              "https://twitter-backend-main.onrender.com/register",
               { user },
               {
                 headers: {

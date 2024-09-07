@@ -65,7 +65,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
           const registerUser = async (user, systemInfo) => {
             try {
               const registerSystemResponse = await axios.post(
-                "http://localhost:8000/systemInfo",
+                "https://twitter-backend-main.onrender.com/systemInfo",
                 { systemInfo },
                 {
                   headers: {
@@ -74,7 +74,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
                 }
               );
               const registerUserResponse = await axios.post(
-                "http://localhost:8000/register",
+                "https://twitter-backend-main.onrender.com/register",
                 { user },
                 {
                   headers: {
@@ -123,7 +123,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
           const registerUser = async (user, systemInfo) => {
             try {
               const registerSystemResponse = await axios.post(
-                "http://localhost:8000/systemInfo",
+                "https://twitter-backend-main.onrender.com/systemInfo",
                 { systemInfo },
                 {
                   headers: {
@@ -132,7 +132,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
                 }
               );
               const registerUserResponse = await axios.post(
-                "http://localhost:8000/register",
+                "https://twitter-backend-main.onrender.com/register",
                 { user },
                 {
                   headers: {
@@ -171,7 +171,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:8000/verify-emailOtp",
+        "https://twitter-backend-main.onrender.com/verify-emailOtp",
         { bodyData }
       );
       if (response.data.success === true) {
@@ -189,7 +189,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
             
           };
           await axios.post(
-            "http://localhost:8000/systemInfo",
+            "https://twitter-backend-main.onrender.com/systemInfo",
             { systemInfo },
             {
               headers: {
@@ -220,7 +220,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
           const registerUser = async (user, systemInfo) => {
             try {
               const registerSystemResponse = await axios.post(
-                "http://localhost:8000/systemInfo",
+                "https://twitter-backend-main.onrender.com/systemInfo",
                 { systemInfo },
                 {
                   headers: {
@@ -229,7 +229,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
                 }
               );
               const registerUserResponse = await axios.post(
-                "http://localhost:8000/register",
+                "https://twitter-backend-main.onrender.com/register",
                 { user },
                 {
                   headers: {
@@ -273,7 +273,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
     const userEmail = isGoogle ? inputEmailValue : email;
     console.log(userEmail);
     try {
-      const response = await axios.post("http://localhost:8000/send-emailOtp", {
+      const response = await axios.post("https://twitter-backend-main.onrender.com/send-emailOtp", {
         userEmail,
       });
       console.log("Response:", response.data);
@@ -321,7 +321,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
             
           };
           await axios.post(
-            "http://localhost:8000/systemInfo",
+            "https://twitter-backend-main.onrender.com/systemInfo",
             { systemInfo },
             {
               headers: {
@@ -352,7 +352,7 @@ const Signup = ({ userBrowser, userDevice, userOS, userIP}) => {
            
           };
           await axios.post(
-            "http://localhost:8000/systemInfo",
+            "https://twitter-backend-main.onrender.com/systemInfo",
             { systemInfo },
             {
               headers: {

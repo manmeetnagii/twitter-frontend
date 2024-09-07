@@ -38,7 +38,7 @@ const [userDevice, setUserDevice] = useState("");
 useEffect(()=>{
   const fetchUserAgent = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/info`);
+      const response = await axios.get(`https://twitter-backend-main.onrender.com/info`);
       console.log(response)
       console.log(response.data.browser.name)
       console.log(response.data.device.type)
