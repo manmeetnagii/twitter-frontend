@@ -18,8 +18,6 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
   const [confirmResult, setConfirmResult] = useState(null);
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
-  const [email, setEmail] = useState("");
-  const [isGoogle, setIsGoogle] = useState(false);
   const [value, setValue] = useState();
   const [success, setSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

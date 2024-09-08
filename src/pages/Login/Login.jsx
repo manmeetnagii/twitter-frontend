@@ -268,7 +268,7 @@ const Login = ({ userBrowser, userDevice, userOS, userIP }) => {
     try {
       if (userDevice === "mobile") {
         // console.log("logging with mobile");
-        if (runBetween2To7PMIST() === false) {
+        if (runBetween2To7PMIST()) {
           const res = await googleSignIn();
           const userEmail = res.user.email;
 
