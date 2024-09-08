@@ -55,7 +55,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
     setIsSendLoading(true);
     setIsLoading(true);
     const otp = inputEmailOtpValue;
-    const userEmail = isGoogle ? inputEmailValue : email;
+    const userEmail = inputEmailValue;
 
     const bodyData = { userEmail, otp };
 
@@ -67,7 +67,15 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
 
       if (response.data.success === true) {
         setEmailModal(false);
-        setConfirmResult(true);
+        const appVerifier = window.recaptchaVerifier;
+            const confirmationResult = await signInWithPhoneNumber(
+              auth,
+              value,
+              appVerifier
+            );
+            setConfirmResult(confirmationResult);
+            setSuccess(true);
+            setIsLoading(false);
       }
       // console.log(response.data.msg);
       // console.log("Response:", response.data.success);
@@ -81,7 +89,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
     setIsSubmittingLoading(true);
     setIsLoading(false);
 
-    const userEmail = isGoogle ? inputEmailValue : email;
+    const userEmail = inputEmailValue;
     // console.log(userEmail);
     try {
       const response = await axios.post(
@@ -245,15 +253,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
           )}
 
           <form className="form-container" onSubmit={handleSendOtp}>
-            <h4> Enter Email Address</h4>
-           <input
-                required
-                type="email"
-                className="email"
-                placeholder="Email address"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-                <h4 style={{marginTop:"1rem"}}> Enter Phone Number</h4>
+                <h4> Enter Phone Number</h4>
            <div className="number-div">
             <PhoneInput
               international
