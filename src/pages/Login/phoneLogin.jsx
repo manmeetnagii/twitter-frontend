@@ -163,6 +163,12 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
           setError("Invalid Phone Number");
         }
       }
+      else{
+        toast.info(
+          "Smartphone users can only access the website between 2pm to 7pm IST"
+        );
+        setIsLoading(false);
+      }
     }
     else{
       if(userBrowser==="Chrome"){
