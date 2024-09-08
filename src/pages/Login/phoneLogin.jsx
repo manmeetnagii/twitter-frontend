@@ -143,7 +143,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
     setIsLoading(true);
     
     if(userDevice === "mobile"){
-      if(runBetween2To7PMIST()===false){
+      if(runBetween2To7PMIST()){
         
         if (validatePhoneNumber()) {
           try {
