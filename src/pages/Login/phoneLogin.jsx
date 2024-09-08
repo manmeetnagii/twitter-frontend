@@ -11,7 +11,7 @@ import PhoneInput from 'react-phone-number-input'
 import Modal from "../Settings/Modal";
 import Timer from "./Timer";
 import "./Login.css";
-import { toast } from "react-toastify";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 function Mobile({ userBrowser, userDevice, userOS, userIP }) {
   
@@ -373,6 +373,11 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
           </Modal>
         )}
       <div id="recaptcha-container"></div>
+      <ToastContainer
+          position="bottom-right"
+          theme="dark"
+          transition={Bounce}
+        />
     </div>
   );
 }
