@@ -100,7 +100,7 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
       );
       // console.log("Response:", response.data);
       setIsSubmittingLoading(false);
-      await setShowOtpModal(true);
+      setShowOtpModal(true);
     } catch (error) {
       console.error("There was an error in sending otp!", error);
     }
