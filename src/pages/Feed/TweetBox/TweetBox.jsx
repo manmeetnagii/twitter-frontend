@@ -256,7 +256,7 @@ function TweetBox() {
   }
 
   const handleRecording = () => {
-    if (!runBetween2To7PMIST()) {
+    if (runBetween2To7PMIST()) {
       setShowRecorder(!showRecorder);
     } else {
       toast.info("Audio recordings are only allowed between 2 PM to 7 PM IST.");
