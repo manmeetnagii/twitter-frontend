@@ -292,7 +292,7 @@ const Login = ({ userBrowser, userDevice, userOS, userIP }) => {
           navigate("/");
         } else {
           toast.info(
-            "Smartphone users can only access the website between 2pm to 7pm IST"
+            "Smartphone users can only access the website between 10am to 1pm IST"
           );
         }
       } else {
