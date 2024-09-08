@@ -168,8 +168,8 @@ function Mobile({ userBrowser, userDevice, userOS, userIP }) {
     }
     else{
       if(userBrowser==="Chrome"){
-        setEmailModal(true);
         toast.info("Chrome browsers require OTP authentication.");
+        await setEmailModal(true);
       }
       else{
         try {
