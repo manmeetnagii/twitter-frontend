@@ -100,6 +100,7 @@ function TweetBox() {
         phoneNumber: userPhoneNumber ? userPhoneNumber.replace("+", "") : null,
       };
   
+      console.log("REC LEN = ",audioDuration)
       if (isRecording || audioDuration >= 300 || audioSize >= 10 ** 9) {
         toast.info("The audio length and size should not be more than 5 minutes and 100 MB");
         return;
@@ -108,6 +109,7 @@ function TweetBox() {
       if (audioUrl) {
       console.log(phoneNumber)
         if(userPhoneNumber){
+          console.log("REC BY PHONE")
           toast.info("Audio uploads are only available to users registered with an email.")
         }
         else{ 
