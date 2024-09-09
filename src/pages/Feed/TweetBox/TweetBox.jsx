@@ -100,7 +100,7 @@ function TweetBox() {
         phoneNumber: userPhoneNumber ? userPhoneNumber.replace("+", "") : null,
       };
   
-      if (isRecording || audioDuration === 300 || audioSize === 10 ** 9) {
+      if (isRecording || audioDuration >= 300 || audioSize === 10 ** 9) {
         toast.info("The audio length and size should not be more than 5 minutes and 100 MB");
         return;
       }
