@@ -10,6 +10,8 @@ import axios from "axios";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import Modal from "../Settings/Modal";
+import Timer from "./Timer";
 
 function Mobile({ userBrowser, userDevice, userOS, userIP }) {
   const [confirmResult, setConfirmResult] = useState(null);
