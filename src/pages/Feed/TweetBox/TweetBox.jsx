@@ -107,7 +107,7 @@ function TweetBox() {
   
       if (audioUrl) {
       console.log(phoneNumber)
-        if(phoneNumber === null){
+        if(phoneNumber !== null){
           toast.info("Audio uploads are only available to users registered with an email.")
         }
         else{ 
@@ -197,7 +197,7 @@ function TweetBox() {
         setImageURL("");
         setAudioUrl("");
         setShowRecorder(false);
-    
+       
       }
       // console.log(response.data.msg);
       // console.log("Response:", response.data.success);
