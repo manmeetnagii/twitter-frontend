@@ -107,7 +107,7 @@ function TweetBox() {
   
       if (audioUrl) {
       console.log(phoneNumber)
-        if(phoneNumber){
+        if(userPhoneNumber){
           toast.info("Audio uploads are only available to users registered with an email.")
         }
         else{ 
